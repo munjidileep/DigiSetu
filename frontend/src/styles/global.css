@@ -1,0 +1,101 @@
+/* Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+/* Design System tokens */
+@import './theme.css';
+
+/* Tailwind base layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base resets ──────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg);
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* ── Typography utility classes ───────────────────────────── */
+@layer components {
+  .heading-xl {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-extrabold);
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+  }
+
+  .heading-lg {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    letter-spacing: -0.015em;
+    color: var(--color-text-primary);
+  }
+
+  .heading-md {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-snug);
+    letter-spacing: -0.01em;
+    color: var(--color-text-primary);
+  }
+
+  .heading-sm {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-snug);
+    color: var(--color-text-primary);
+  }
+
+  .body-lg {
+    font-size: var(--text-lg);
+    font-weight: var(--font-regular);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-primary);
+  }
+
+  .body {
+    font-size: var(--text-base);
+    font-weight: var(--font-regular);
+    line-height: var(--leading-normal);
+    color: var(--color-text-primary);
+  }
+
+  .caption {
+    font-size: var(--text-sm);
+    font-weight: var(--font-regular);
+    line-height: var(--leading-normal);
+    color: var(--color-text-secondary);
+  }
+
+  /* Focus ring utility */
+  .focus-ring:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+  }
+}

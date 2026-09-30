@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+.vite/
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Runtime uploads and temporary files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Local tooling and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
